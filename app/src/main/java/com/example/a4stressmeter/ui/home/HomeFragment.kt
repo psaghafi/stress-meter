@@ -1,5 +1,6 @@
 package com.example.a4stressmeter.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.a4stressmeter.HomeActivity
 import com.example.a4stressmeter.R
 import com.example.a4stressmeter.databinding.FragmentHomeBinding
 
@@ -51,12 +53,22 @@ class HomeFragment : Fragment() {
         // on below line we are adding on item
         // click listener for our grid view.
         courseGRV.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
+
+            var intent= Intent(context, HomeActivity::class.java)
+            //intent.putExtra("courseList", courseList[position])
+            //intent.putExtra("courseList", courseList[position])
+            //intent.p
+           intent.putExtra("courseList", courseList[position])
+            startActivity(intent)
+
+
+
             // inside on click method we are simply displaying
             // a toast message with course name.
-            Toast.makeText(
+           /* Toast.makeText(
                 requireContext(), courseList[position].courseName + " selected",
                 Toast.LENGTH_SHORT
-            ).show()
+            ).show()*/
         }
 
         /*val textView: TextView = binding.textHome
