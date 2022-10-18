@@ -19,13 +19,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent" /><![CDATA[
     !--on below line we are creating a grid view-->
+
+    ]]>
+
     <GridView
         android:id="@+id/idGRV"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="571dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="-2dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="99dp"
         android:horizontalSpacing="6dp"
-        android:numColumns="2"
+        android:numColumns="4"
         android:verticalSpacing="6dp" />
+
+    <Button
+        android:id="@+id/moreImageBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="600dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="26dp"
+        android:minHeight="60dp"
+        android:text="More Images"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
 </RelativeLayout>
