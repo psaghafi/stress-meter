@@ -20,7 +20,7 @@ internal class GridRVAdapter(
     private val context: Context
 ) :
     BaseAdapter() {
-    private var gridview1 = arrayOf(
+     var gridview1 = arrayOf(
         R.drawable.psm_mountains11,
         R.drawable.psm_wine3,
         R.drawable.psm_barbed_wire2,
@@ -38,7 +38,7 @@ internal class GridRVAdapter(
         R.drawable.psm_to_do_list3,
         R.drawable.psm_work4)
 
-    private var gridview2 = arrayOf(
+     var gridview2 = arrayOf(
         R.drawable.psm_talking_on_phone2,
         R.drawable.psm_stressed_person,
         R.drawable.psm_stressed_person12,
@@ -56,7 +56,7 @@ internal class GridRVAdapter(
         R.drawable.psm_alarm_clock2,
         R.drawable.psm_sticky_notes2)
 
-    private var gridview3 = arrayOf(
+     var gridview3 = arrayOf(
         R.drawable.psm_anxious,
         R.drawable.psm_hiking3,
         R.drawable.psm_stressed_person3,
@@ -73,7 +73,7 @@ internal class GridRVAdapter(
         R.drawable.psm_running3,
         R.drawable.psm_neutral_child,
         R.drawable.psm_headache2)
-     lateinit var courses: Array<Int>
+     //lateinit var courses: Array<Int>
     fun gridChange(grid_view: Int){
         print("GRID VIEW ADAPTER")
         when(grid_view){
@@ -82,6 +82,8 @@ internal class GridRVAdapter(
             2->courses=gridview3
         }
     }
+    lateinit var courses: Array<Int>
+
     // in base adapter class we are creating variables
     // for layout inflater, course image view and course text view.
     private var layoutInflater: LayoutInflater? = null

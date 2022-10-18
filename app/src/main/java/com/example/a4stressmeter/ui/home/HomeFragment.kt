@@ -78,7 +78,7 @@ class HomeFragment : Fragment() {
         val courseAdapter = GridRVAdapter(requireContext())
         val random_image_page=(0..2).shuffled().first()
         courseAdapter.gridChange(random_image_page)
-        val courses = courseAdapter.courses
+        //val courses = courseAdapter.courses
 
 // on below line we are setting adapter to our grid view.
         courseGRV.adapter = courseAdapter
@@ -88,10 +88,24 @@ class HomeFragment : Fragment() {
             stopThread=true
             image_number=(image_number+1).mod(3)
             courseAdapter.gridChange(image_number)
-            val courses = courseAdapter.courses
+           val courses= courseAdapter.courses
             courseGRV.adapter = courseAdapter
+            if(image_number != random_image_page){
+               if(courseGRV==courseAdapter.gridview1){
+                  courseAdapter.courses=courses
+               }
+                if(courseGRV==courseAdapter.gridview2){
+                    courseAdapter.courses=courses
+                }
+                if(courseGRV==courseAdapter.gridview3){
+                    courseAdapter.courses=courses
+                }
+            }
+
 
         }
+
+
 
         // on below line we are adding on item
         // click listener for our grid view.
@@ -101,7 +115,7 @@ class HomeFragment : Fragment() {
             var intent= Intent(context, HomeActivity::class.java)
             intent.putExtra("image_number", image_number)
             intent.putExtra("position", position)
-            intent.putExtra("image",courses[position])
+            intent.putExtra("image",courseAdapter.courses[position])
             //intent.putExtra("position", courses[position])
             //intent.putExtra("image", courseList[position].courseImg)
             //intent.putExtra("name", courseList[position].courseName)
