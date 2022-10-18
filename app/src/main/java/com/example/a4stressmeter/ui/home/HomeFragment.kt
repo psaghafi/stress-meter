@@ -14,6 +14,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.a4stressmeter.HomeActivity
 import com.example.a4stressmeter.R
 import com.example.a4stressmeter.databinding.FragmentHomeBinding
+import java.io.Serializable
 
 class HomeFragment : Fragment() {
 
@@ -57,9 +58,13 @@ class HomeFragment : Fragment() {
             var intent= Intent(context, HomeActivity::class.java)
             //intent.putExtra("courseList", courseList[position])
             //intent.putExtra("courseList", courseList[position])
+            //Integer.parseInt(courseList[position].courseName)
             //intent.p
-           intent.putExtra("courseList", courseList[position])
-            startActivity(intent)
+           intent.putExtra("image", courseList[position].courseImg)
+            intent.putExtra("name", courseList[position].courseName)
+           //requireContext().startActivity(intent)
+         //   intent.putExtra("resId", courseList[position].courseName as Serializable)
+              requireContext().startActivity(intent)
 
 
 
@@ -75,6 +80,7 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }*/
+
         return root
     }
 

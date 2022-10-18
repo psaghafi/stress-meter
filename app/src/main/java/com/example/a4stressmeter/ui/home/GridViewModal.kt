@@ -1,5 +1,7 @@
 package com.example.a4stressmeter.ui.home
 
+import java.io.Serializable
+
 // on below line we are creating a modal class.
 data class GridViewModal(
     // we are creating a modal class with 2 member
