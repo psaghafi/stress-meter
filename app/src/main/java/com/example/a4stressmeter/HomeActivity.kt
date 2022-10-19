@@ -30,13 +30,7 @@ class HomeActivity : AppCompatActivity()  {
         //val textView: TextView=findViewById(R.id.textView)
         val imageView: ImageView = findViewById(R.id.viewImage)
         var bundle: Bundle? =intent.extras
-        val imagenumber=intent.getIntExtra("image_number", -1)
-        val position =intent.getIntExtra("position",-1)
-//        val courseGRV = GridRVAdapter.getItem(position)
-  //      val imagepage= GridRVAdapter.getItem(imagenumber)
 
-        //val callinghomefragment= GridRVAdapter().gridChange(imagenumber)
-        //callinghomefragment.gridChange(imagenumber)
         //imageView.setImageResource(bundle!!.getInt("image"))
         //extView.text=bundle!!.getString("name")
         imageView.setImageResource(bundle!!.getInt("image"))
